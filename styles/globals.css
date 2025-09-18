@@ -1,0 +1,46 @@
+/* filepath: c:\Users\Vijay Kumar\OneDrive\Desktop\JAM-stack\styles\globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+  
+  body {
+    @apply text-gray-900 bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition-colors font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors font-medium;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+}
+
+/* Honest mobile experience notice */
+@media (max-width: 768px) {
+  .mobile-notice {
+    @apply block bg-yellow-100 border border-yellow-300 rounded-lg p-4 m-4;
+  }
+  
+  .mobile-notice::before {
+    content: "📱 Mobile experience is still being optimized. Best viewed on desktop.";
+    @apply text-yellow-800 text-sm font-medium;
+  }
+}
